@@ -112,48 +112,48 @@ $string['region-content-bottom'] = 'Content Bottom';
 
 
 // Frontend
-$string['logininfo'] = 'Forgot your username or password?';
-$string['foldernoexists'] = 'Images folder does not exists.';
-$string['folderisempty'] = 'Images folder is empty.';
-$string['adminblockinfo'] = 'Blocks placed in this region will be visible only for admin users.';
-$string['entercourse'] = 'Enter this course';
-$string['showsidebar'] = 'Show sidebars';
-$string['hidesidebar'] = 'Hide sidebars';
-$string['recyclebin'] = 'Recycle bin';
-$string['eventmonitoring'] = 'Event monitoring';
-$string['livelogs'] = 'Live logs';
-$string['courseparticipation'] = 'Course participation';
-$string['coursemanagement'] = 'Course management';
-$string['coursedashboard'] = 'Course dashboard';
-$string['studentsandyou'] = '{$a->students} and you';
-$string['popularlinks'] = 'Popular links:';
-$string['readmore'] = 'Read more';
-$string['frontpagebuilder'] = 'Front page builder';
-$string['hidden'] = 'Hidden';
-$string['noprice'] = 'Free';
-$string['nocourseincategory'] = 'No courses';
-$string['mybookmarks'] = 'My bookmarks';
-$string['wentwrong'] = 'Something went wrong';
-$string['bkmarklimit'] = 'You may add up to {$a->limit} bookmarks';
-$string['layoutgrid'] = 'Grid layout';
-$string['layoutlist'] = 'List layout';
+$string['logininfo'] = 'Esqueceu seu usuário ou senha?';
+$string['foldernoexists'] = 'Pasta de Imagens não existe.';
+$string['folderisempty'] = 'Pasta de Imagens está vazia.';
+$string['adminblockinfo'] = 'Blocos inseridos nessa região serão visíveis apenas pelos administradores.';
+$string['entercourse'] = 'Entrar no curso';
+$string['showsidebar'] = 'Mostrar Barras Laterais';
+$string['hidesidebar'] = 'Ocultar Barras Laterais';
+$string['recyclebin'] = 'Lixeira';
+$string['eventmonitoring'] = 'Monitor de Eventos';
+$string['livelogs'] = 'Logs ativos';
+$string['courseparticipation'] = 'Participação no Curso';
+$string['coursemanagement'] = 'Gerenciamento de Cursos';
+$string['coursedashboard'] = 'Página Inicial do Curso';
+$string['studentsandyou'] = '{$a->students} e você';
+$string['popularlinks'] = 'Links populares:';
+$string['readmore'] = 'Leia mais';
+$string['frontpagebuilder'] = 'Construtor de Páginas';
+$string['hidden'] = 'Oculto';
+$string['noprice'] = 'Gratuito';
+$string['nocourseincategory'] = 'Sem cursos';
+$string['mybookmarks'] = 'Minhas marcações';
+$string['wentwrong'] = 'Algo está errado';
+$string['bkmarklimit'] = 'Você pode adicionar até {$a->limit} marcações';
+$string['layoutgrid'] = 'Layout grade';
+$string['layoutlist'] = 'Layout lista';
 
 
 // Settings tabs
 $string['configtitle'] = 'New Learning';
-$string['settingsgeneral'] = 'General';
-$string['settingsfeatures'] = 'Features';
+$string['settingsgeneral'] = 'Geral';
+$string['settingsfeatures'] = 'Funcionalidades';
 $string['settingsnav'] = 'Menus';
 $string['settingssocial'] = 'Social';
-$string['settingsfonts'] = 'Fonts';
-$string['settingstypography'] = 'Typography';
-$string['settingsstyle'] = 'Style';
-$string['allsettings'] = 'All Settings';
+$string['settingsfonts'] = 'Fontes';
+$string['settingstypography'] = 'Tipografia';
+$string['settingsstyle'] = 'Estilo';
+$string['allsettings'] = 'Todas configurações';
 
 
 // Settings panel
-$string['documentation'] = 'Documentation';
-$string['morethemes'] = 'More Themes';
+$string['documentation'] = 'Documentação';
+$string['morethemes'] = 'Mais temas';
 $string['urldoc'] = 'http://marbol2.com/docs/new-learning';
 $string['urlmore'] = 'https://themeforest.net/user/marbol2/portfolio?ref=marbol2';
 
