@@ -1,0 +1,41 @@
+
+#scorm_toc_toggle_btn {
+	padding-left: 8px;
+	padding-right: 8px;	
+}
+
+
+.path-mod-scorm {
+	
+	.breadcrumb {
+		+ a {
+			.mb2_button();
+			.mb2_button_variant(#fff, @accent1, @accent1);
+			float: right;	
+		}
+	}	
+	
+	.dir-rtl& {
+		.breadcrumb {
+			+ a {
+				float: left;	
+			}
+		}	
+	}	
+		
+}
+
+
+
+@media only screen and (max-width:768px){
+	
+	.path-mod-scorm {
+	
+		.breadcrumb {
+			+ a {
+				float: none;	
+			}
+		}
+	}
+		
+}

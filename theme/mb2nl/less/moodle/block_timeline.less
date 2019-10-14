@@ -1,0 +1,68 @@
+
+.block_timeline {
+
+	.container-fluid,
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.list-group {
+		margin-bottom: 10px;
+
+		> li {
+			margin: 0 0 10px 0px;
+			.mb2_border_radius(0);
+			.mb2_box_shadow(0 2px 0, rgba(0,0,0,.08));
+			padding: 6px 10px;
+
+			> div {
+				> h4 {
+					margin-top: 0;
+					font-size: @fsgeneral;
+					background-color: @color_gray2;
+					padding: 5px;
+
+					 a {
+						 color: inherit;
+					 }
+				}
+			}
+
+
+
+		}
+	}
+
+
+	.paged-content-page-container {
+		h5,
+		h6 {
+			font-size: @fssmall;
+			margin: 0;
+		}
+
+		h5 {
+			margin-bottom: 12px;
+			margin-top: 22px;
+			font-weight: bold;
+			border-left: solid 2px @accent1;
+			padding-left: 10px;
+		}
+
+		.media {
+			> .text-right {
+				position: relative;
+				top: -5px;
+			}
+
+			img.icon {
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+
+}

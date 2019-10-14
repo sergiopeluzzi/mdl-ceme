@@ -1,0 +1,42 @@
+
+/* Fix bootstrap */
+
+.block.hidden,
+fieldset.hidden,
+.icon.hide {
+	display: block !important;
+}
+
+.block.hidden {
+	visibility: visible !important;
+}
+
+
+.form-control {
+	height: 35px;
+}
+
+.input-group-btn:first-child>.btn,
+.input-group-btn:first-child>.btn-group {
+	z-index: 3;
+}
+
+div[hidden="hidden"] {
+	display: none;
+	visibility: hidden;
+}
+
+.form-control-feedback {
+	position: static;
+}
+
+.theme-table-wrap {
+	.media-body {
+		width: auto;
+	}
+}
+
+.rounded-circle {
+	.mb2_border_radius(50%);
+	min-width: auto;
+}

@@ -1,0 +1,70 @@
+
+
+#site-menu {
+	background-color: @color_gray3;
+}
+
+
+.site-menu-list {
+
+	.clearfix();
+	margin: 0 -3px;
+
+	li {
+		display: block;
+		float: left;
+		font-size: @fssmall;
+		background-color: @accent1;
+		.mb2_border_radius(3px);
+		margin: 6px 3px;
+		text-align: center;
+
+		a {
+			display: block;
+			color: #fff;
+
+			i {
+				font-size: 17px;
+				padding: 6px;
+			}
+
+			span {
+				display: block;
+				padding: 0 9px;
+				background-color: rgba(0,0,0,.1);
+				.mb2_border_radius(0 0 3px 3px);
+			}
+		}
+
+
+		&.item-courses,
+		&.item-editcourse,
+		&.item-editcategory,
+		&.item-editfrontpage {
+			background-color: @color_info;
+		}
+
+
+		&.item-calendar,
+		&.item-addcourse,
+		&.item-addcategory {
+			background-color: @color_success;
+		}
+
+
+		&.item-badges,
+		&.item-buildfrontpage {
+			background-color: @color_warning;
+		}
+
+	}
+
+
+
+	.dir-rtl & {
+		li {
+			float: right;
+		}
+	}
+
+}

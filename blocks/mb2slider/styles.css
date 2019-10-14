@@ -1,0 +1,1112 @@
+/**
+ * @package		Mb2 Slider
+ * @author		Mariusz Boloz (http://mb2extensions.com)
+ * @copyright	Copyright (C) 2017 Mariusz Boloz (http://mb2extensions.com). All rights reserved
+ * @license		Commercial (http://codecanyon.net/licenses)
+**/
+
+@font-face {
+  font-family: 'mb2slider_font';
+  src: url('../../../../blocks/mb2slider/assets/font/mb2slider_font.eot?66378961');
+  src: url('../../../../blocks/mb2slider/assets/font/mb2slider_font.eot?66378961#iefix') format('embedded-opentype'),
+       url('../../../../blocks/mb2slider/assets/font/mb2slider_font.woff?66378961') format('woff'),
+       url('../../../../blocks/mb2slider/assets/font/mb2slider_font.ttf?66378961') format('truetype'),
+       url('../../../../blocks/mb2slider/assets/font/mb2slider_font.svg?66378961#mb2slider_font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ 
+ [class^="mb2slider_icon-"]:before, [class*=" mb2slider_icon-"]:before {
+  font-family: "mb2slider_font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.mb2slider_icon-right-open:before { content: '\e800'; } /* '' */
+.mb2slider_icon-left-open:before { content: '\e801'; } /* '' */
+.mb2slider_icon-down-open:before { content: '\e802'; } /* '' */
+.mb2slider_icon-up-open:before { content: '\e803'; } /* '' */
+
+
+
+
+
+/* ============================== LIGHTSLIDER ============================== */
+
+
+
+/*! lightslider - v1.1.3 - 2015-04-14
+* https://github.com/sachinchoolur/lightslider
+* Copyright (c) 2015 Sachin N; Licensed MIT */
+/** /!!! core css Should not edit !!!/**/ 
+
+.lSSlideOuter {
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+.lightSlider:before, .lightSlider:after {
+    content: " ";
+    display: table;
+}
+.lightSlider {
+    overflow: hidden;
+    margin: 0;
+}
+.lSSlideWrapper {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.lSSlideWrapper > .lightSlider:after {
+    clear: both;
+}
+.lSSlideWrapper .lSSlide {
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    -webkit-transition: all 1s;
+    -webkit-transition-property: -webkit-transform,height;
+    -moz-transition-property: -moz-transform,height;
+    transition-property: transform,height;
+    -webkit-transition-duration: inherit !important;
+    transition-duration: inherit !important;
+    -webkit-transition-timing-function: inherit !important;
+    transition-timing-function: inherit !important;
+}
+.lSSlideWrapper .lSFade {
+    position: relative;
+}
+.lSSlideWrapper .lSFade > * {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    margin-right: 0;
+    width: 100%;
+}
+.lSSlideWrapper.usingCss .lSFade > * {
+    opacity: 0;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-duration: inherit !important;
+    transition-duration: inherit !important;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-timing-function: inherit !important;
+    transition-timing-function: inherit !important;
+}
+.lSSlideWrapper .lSFade > *.active {
+    z-index: 10;
+}
+.lSSlideWrapper.usingCss .lSFade > *.active {
+    opacity: 1;
+}
+/** /!!! End of core css Should not edit !!!/**/
+
+/* Pager */
+.lSSlideOuter .lSPager.lSpg {
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: center;
+}
+.lSSlideOuter .lSPager.lSpg > li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 5px;
+}
+.lSSlideOuter .lSPager.lSpg > li a {
+    background-color: #222222;
+    border-radius: 30px;
+    display: inline-block;
+    height: 8px;
+    overflow: hidden;
+    text-indent: -999em;
+    width: 8px;
+    position: relative;
+    z-index: 99;
+    -webkit-transition: all 0.5s linear 0s;
+    transition: all 0.5s linear 0s;
+}
+.lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
+    background-color: #428bca;
+}
+.lSSlideOuter .media {
+    opacity: 0.8;
+}
+.lSSlideOuter .media.active {
+    opacity: 1;
+}
+/* End of pager */
+
+
+/* slider actions */
+.lSAction > a {
+    width: 32px;
+    display: block;
+    top: 50%;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    margin-top: -16px;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.35s linear 0s;
+    transition: opacity 0.35s linear 0s;
+}
+.lSAction > a:hover {
+    opacity: 1;
+}
+.lSAction > .lSPrev {
+    background-position: 0 0;
+    left: 10px;
+}
+.lSAction > .lSNext {
+    background-position: -32px 0;
+    right: 10px;
+}
+.lSAction > a.disabled {
+    pointer-events: none;
+}
+.cS-hidden {
+    height: 1px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* Rtl */
+/*.lSSlideOuter.lSrtl {
+    direction: rtl;
+}*/
+.lSSlideOuter .lightSlider, 
+.lSSlideOuter .lSPager {
+    padding-left: 0;
+    list-style: none outside none;
+}
+.lSSlideOuter.lSrtl .lightSlider, 
+.lSSlideOuter.lSrtl .lSPager {
+    padding-right: 0;
+}
+.lSSlideOuter .lightSlider > *,  
+.lSSlideOuter .lSGallery li {
+    float: left;
+}
+/*.lSSlideOuter.lSrtl .lightSlider > *,  
+.lSSlideOuter.lSrtl .lSGallery li {
+    float: right !important;
+}*/
+/* Rtl */
+
+@-webkit-keyframes rightEnd {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -15px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+@keyframes rightEnd {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -15px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+@-webkit-keyframes topEnd {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -15px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+@keyframes topEnd {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -15px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+@-webkit-keyframes leftEnd {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 15px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+@keyframes leftEnd {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 15px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+@-webkit-keyframes bottomEnd {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: -15px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes bottomEnd {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: -15px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+.lSSlideOuter .rightEnd {
+    -webkit-animation: rightEnd 0.3s;
+    animation: rightEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter .leftEnd {
+    -webkit-animation: leftEnd 0.3s;
+    animation: leftEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter.vertical .rightEnd {
+    -webkit-animation: topEnd 0.3s;
+    animation: topEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter.vertical .leftEnd {
+    -webkit-animation: bottomEnd 0.3s;
+    animation: bottomEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter.lSrtl .rightEnd {
+    -webkit-animation: leftEnd 0.3s;
+    animation: leftEnd 0.3s;
+    position: relative;
+}
+.lSSlideOuter.lSrtl .leftEnd {
+    -webkit-animation: rightEnd 0.3s;
+    animation: rightEnd 0.3s;
+    position: relative;
+}
+/*/  GRab cursor */
+.lightSlider.lsGrab > * {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.lightSlider.lsGrabbing > * {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: grabbing;
+}
+
+
+
+
+/* ============================== CONFIGURE FORM ============================== */
+
+/* Spectrum input field */
+
+.sp-input {
+	background-color: #fff!important;	
+}
+
+
+/* Template setting accordion */
+
+.mb2slider-accc {
+	border: solid 1px #d4d5d6;
+	margin-bottom: 15px;	
+}
+
+.mb2slider-accc > h4 {
+	padding: 15px 20px;	
+	background-color: #f7f8f9;
+	font-size: $font_size;
+	margin: 0;
+	color: 14px;
+	cursor: pointer;
+}
+
+.mb2slider-acccontent {
+	border-top: solid 1px #d4d5d6;
+	padding: 30px 20px 0 20px;
+	display: none;	
+}
+
+
+
+
+
+
+
+
+
+/* Style for slider container */
+
+.mb2slider {
+	position: relative;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+}
+
+.mb2slider-inner {
+	position: relative;	
+}
+
+.mb2slider *,
+.mb2slider *:before,
+.mb2slider *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;	
+}
+
+
+
+
+/* ============================== COLUMNS ============================== */
+
+
+.mb2slider.columns {
+	margin-left: -15px;
+	margin-right: -15px;	
+}
+
+.mb2slider.columns .mb2slider-add-text-top,
+.mb2slider.columns .mb2slider-add-text-bottom,
+.mb2slider.columns .mb2slider-add-text-lr,
+.mb2slider.columns .mb2slider-inner  {
+	padding: 0 15px;	
+}
+
+.mb2slider.columns-left .mb2slider-add-text-lr,
+.mb2slider.columns-left .mb2slider-inner {
+	float: left;
+}
+
+.mb2slider.columns-right .mb2slider-add-text-lr,
+.mb2slider.columns-right .mb2slider-inner {
+	float: right;
+}
+
+
+@media only screen and (max-width:768px){
+	
+	.mb2slider.columns .mb2slider-add-text-lr,
+	.mb2slider.columns .mb2slider-inner {
+		width: 100% !important;
+		float: none !important;	
+	}
+	
+}
+
+
+
+
+
+/* ============================== SLIDER LIST ============================== */
+
+.mb2slider-slide-list {
+	margin: 0;
+	padding: 0;
+}
+
+.mb2slider-slide-list > li {
+	margin: 0;
+	padding: 0;		
+}
+
+.mb2slider-slide-item-inner {
+	position: relative;	
+}
+
+.mb2slider-slide-img {
+	width: 100%;
+	height: auto;
+	position: static !important;
+	left: 0!important;
+	top: 0 !important;	
+	
+}
+
+.mb2slider-bgimg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-transition: all 0.25s linear 0s;
+	-moz-transition: all 0.25s linear 0s;
+	-ms-transition: all 0.25s linear 0s;
+    transition: all 0.25s linear 0s;		
+}
+
+.mb2slider-overlay-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	z-index: 1;
+}
+
+
+
+
+/* ============================== DIRECTION NAVIGATION ============================== */
+
+.mb2slider .lSAction > a {
+	background-color: rgba(0,0,0,.3);
+	line-height: 50px;
+	width: 50px;
+	height: 50px;
+	margin-top: -25px;
+	text-align: center;
+	font-size: 14px;    
+    opacity: 0;
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+	-webkit-transition: all 0.15s linear 0s;
+	-moz-transition: all 0.15s linear 0s;
+	-ms-transition: all 0.15s linear 0s;
+    transition: all 0.15s linear 0s;
+}
+
+
+@media only screen and (max-width:768px){
+	
+	.mb2slider .lSAction > a {
+		line-height: 36px;
+		width: 36px;
+		height: 36px;
+		margin-top: -18px;
+		font-size: 12px;
+	}
+	
+}
+
+
+.mb2slider-inner:hover .lSAction > a {
+	opacity: 1;	
+}
+
+.mb2slider .lSAction > a:hover {
+	color: #fff;
+	background-color: rgba(0,0,0,.7);
+	text-decoration: none;	
+}
+
+.mb2slider .lSAction > .lSPrev {
+    left: 15px;
+}
+.mb2slider .lSAction > .lSNext {
+    right: 15px;
+}
+
+.mb2slider .lSSlideOuter.vertical .lSAction > .lSNext {
+	bottom: 0;	
+}
+
+.mb2slider .lSSlideOuter.vertical .lSAction > .lSPrev {
+	top: 0;	
+}
+
+
+
+/* ============================== CONTROL NAVIGATION ============================== */
+
+.mb2slider .lSPager.lSpg {
+	position: relative;
+	margin-top: -40px;	
+}
+
+.mb2slider .lSSlideOuter .lSPager.lSpg > li a {
+	background-color: rgba(0,0,0,.3);
+	-webkit-transition: all 0.15s linear 0s;
+	-moz-transition: all 0.15s linear 0s;
+	-ms-transition: all 0.15s linear 0s;
+    transition: all 0.15s linear 0s;
+	outline: none;
+	width: 15px;
+	height: 15px;
+}
+
+.mb2slider .lSSlideOuter .lSPager.lSpg > li a:hover,
+.mb2slider .lSSlideOuter .lSPager.lSpg > li.active a  {
+	background-color: rgba(0,0,0,.7);
+}
+
+
+
+
+/* ============================== MEDIA ============================== */
+
+.mb2slider-slide-media {
+	position: relative;
+	overflow: hidden;	
+}
+
+
+
+
+
+
+/* ============================== CAPTION ============================== */
+
+.mb2slider-caption {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #fff;
+	margin: 0 auto;
+	width: 100%;
+	z-index: 2;
+}
+
+
+/* Caption animation */
+
+.mb2slider-slide-list > li .mb2slider-caption.anim1 {
+	top: 15px;
+	bottom: -15px;
+	opacity: 0;
+}
+
+/*.mb2slider-slide-list > li.active .mb2slider-caption.anim1 {
+	top: 0;
+	bottom: 0;
+	opacity: 1;	
+}*/
+
+
+.mb2slider-caption.hor-center .mb2slider-caption-content {
+	text-align: center;	
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.mb2slider-caption.hor-right .mb2slider-caption-content {
+	float: right;	
+}
+
+@media only screen and (max-width:768px){
+	.mb2slider-caption.hor-right .mb2slider-caption-content {
+		float: none;	
+	}	
+}
+
+
+.mb2slider-caption-content {
+	padding: 15px 0;
+	position: relative;
+}
+
+
+@media only screen and (max-width:768px){
+	.nocarousel .mb2slider-caption-content {
+		padding: 10px 0;	
+	}
+	
+	.nocarousel .slide-link-btn .mb2slider-caption-content {
+		padding-right: 40px;	
+	}
+}
+
+.mb2slider-title {
+	color: #fff;
+	margin: 0 15px 15px 15px;
+}
+
+.mb2slider-description {
+	margin: 0 15px;	
+}
+
+.mb2slider-description p {
+	margin: 0;	
+}
+
+
+
+
+/* Course details */
+
+.mb2slider-course-details {
+	font-size: 90%;
+	opacity: .6;	
+}
+
+.mb2slider-course-details > span {
+	padding-right: 12px;	
+}
+
+.mb2slider-course-details i {
+	padding-right: 5px;		
+}
+
+
+.dir-rtl .mb2slider-course-details > span {
+	padding-left: 12px;
+	padding-right: 0;	
+}
+
+
+
+
+/* Read more button */
+
+.mb2slider-btn-mobile {
+	display: none;
+    width: 40px;
+    height: 40px;
+    background-color: #009966;
+    text-align: center;
+    line-height: 40px;
+    color: #fff !important;
+	text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+	font-size: 20px;
+}
+
+.mb2slider-btn {
+	margin-top: 15px;
+	display: inline-block;	
+}
+
+
+
+
+@media only screen and (max-width:768px){
+	
+	.nocarousel .mb2slider-title {
+		font-size: 24px !important;
+		margin: 0 10px 7px 10px;	
+	}
+	
+	.nocarousel .mb2slider-description {
+		margin: 0 10px;	
+	}
+	
+	.nocarousel .mb2slider-text {
+		font-size: 15px !important;	
+	}
+	
+	.nocarousel .mb2slider-btn {
+		display: none !important;
+	}
+	
+	.nocarousel .mb2slider-btn-mobile {
+		display: block;
+	}
+	
+}
+
+
+
+
+@media only screen and (max-width:480px){
+	
+	.nocarousel .mb2slider-title {
+		font-size: 20px !important;	
+		margin-bottom: 0;
+	}
+	
+}
+
+
+.mb2slider-caption1 {
+	max-width: 100%;
+	height: 100%;
+	padding-left: 15px;
+	padding-right: 15px;	
+}
+
+.mb2slider-caption2 {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.mb2slider-caption3 {
+	display: table-cell;
+}
+
+.ver-center .mb2slider-caption3 {	
+	vertical-align: middle;
+}
+
+.ver-top .mb2slider-caption3 {	
+	vertical-align: top;
+}
+
+.ver-bottom .mb2slider-caption3 {	
+	vertical-align: bottom;
+}
+
+
+.ver-top .mb2slider-caption-content {	
+	margin-top: 30px;
+}
+
+.ver-bottom .mb2slider-caption-content {	
+	margin-bottom: 30px;
+}
+
+
+/* Stip light style */
+
+.strip-light {
+	background-color: rgba(255,255,255,.55);
+	background-image: url('[[pix:block_mb2slider|svg/strip1_black10]]');	
+}
+
+.strip-light .mb2slider-title,
+.strip-light .mb2slider-description {
+	color: #242424;	
+}
+
+
+
+/* Stip dark style */
+
+.strip-dark {
+	background-color: rgba(0,0,0,.55);
+	background-image: url('[[pix:block_mb2slider|svg/strip1_white10]]');	
+}
+
+
+
+/* Circle style */
+
+.circle {
+	border-radius: 999px;	
+	-webkit-border-radius: 999px;
+	-ms-border-radius: 999px;
+	-moz-border-radius: 999px;
+	-o-border-radius: 999px;
+	padding: 70px 30px 0 30px;
+	text-align: center;
+}
+
+
+@media only screen and (max-width:768px){
+	
+	.circle {
+		border-radius: 0;	
+		-webkit-border-radius: 0;
+		-ms-border-radius: 0;
+		-moz-border-radius: 0;
+		-o-border-radius: 0;
+		padding: 0;
+		text-align: inherit;
+		width: auto !important;
+		height: auto !important;
+	}
+	
+}
+
+
+
+/* Border style */
+
+.border .mb2slider-border {
+	display: block;
+	height: 100%;
+	width: 6px;
+	position: absolute;
+	top: 0;
+	left: -6px;
+	background-color: rgba(0,0,0,.45);	
+}
+
+
+.dir-rtl .border .mb2slider-border {
+	left: auto;
+	right: -6px;
+}
+
+
+
+/* Sahdow */
+
+.isshadow {
+	-webkit-box-shadow: 7px 7px 0 0 rgba(0,0,0,.15);
+  	-moz-box-shadow: 7px 7px 0 0 rgba(0,0,0,.15);
+	-ms-box-shadow: 7px 7px 0 0 rgba(0,0,0,.15);
+  	box-shadow: 7px 7px 0 0 rgba(0,0,0,.15);	
+}
+
+.dir-rtl .isshadow {
+	-webkit-box-shadow: -7px 7px 0 0 rgba(0,0,0,.15);
+  	-moz-box-shadow: -7px 7px 0 0 rgba(0,0,0,.15);
+	-ms-box-shadow: -7px 7px 0 0 rgba(0,0,0,.15);
+  	box-shadow: -7px 7px 0 0 rgba(0,0,0,.15);	
+}
+
+
+@media only screen and (max-width:768px){
+	
+	.isshadow {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-ms-box-shadow: none;
+		box-shadow: none;	
+	}
+	
+}
+
+
+
+
+
+
+/* Caption navigation */
+
+.mb2slider-captionnav {
+	margin: 25px -15px -15px -15px;	
+	background-color: #333;
+}
+
+
+.mb2slider-captionnav a,
+.mb2slider-captionnav span {
+	display: inline-block;
+	margin: 0;
+	padding: 5px 0;
+	width: 33.33333333333%;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	color: #fff;	
+}
+
+.mb2slider-captionnav span {
+	font-size: 13px;	
+}
+
+
+.mb2slider-captionnav a:after,
+.mb2slider-prevslide:after {
+	content: '';
+	display: block;
+	width: 1px;
+	height: 100%;
+	border-right: solid 1px rgba(255,255,255,.5);
+	position: absolute;
+	top: 0;
+	right: 0;	
+}
+
+.mb2slider-captionnav a {
+	background-color: #009966;	
+}
+
+.mb2slider-captionnav.nolink span {
+	width: 50%;	
+}
+
+.navtype2 .mb2slider-caption-content.custom {
+	background-color: rgba(0,0,0,.55);	
+}
+
+@media only screen and (max-width:768px){
+	.mb2slider-captionnav {
+		display: none;	
+	}
+	
+}
+
+
+
+
+/* ============================== CAROUSEL ============================== */
+
+.carousel .mb2slider-title {
+	position: relative;
+	margin-bottom: 25px;	
+}
+
+
+.carousel .mb2slider-title:after {
+	content: ' ';
+	display: block;
+	height: 1px;
+	width: 70px;
+	position: absolute;
+	left: 50%;
+	margin-left: -35px;
+	bottom: -10px;
+	border-top: solid 1px #fff;	
+	-webkit-transition: all .25s ease-in-out;
+  	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+  	transition: all .25s ease-in-out;	
+}
+
+
+.carousel .mb2slider-slide-item-inner:hover .mb2slider-title:after {
+	left: 0;
+	width: 100%;
+	margin-left: 0;
+}
+
+
+.carousel .mb2slider-title,
+.carousel .mb2slider-description {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+.carousel .mb2slider-slide-item-inner:hover .mb2slider-bgimg {
+	-webkit-transform: scale(1.1);
+  	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+  	transform: scale(1.1);	
+}
+
+
+
+.mb2slider.carousel .lSAction > a {
+	line-height: 38px;
+	width: 38px;
+	height: 38px;
+	margin-top: -19px;
+}
+
+
+
+
+
+/* ============================== VIDEO ============================== */
+
+.mb2slider-video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.mb2slider-video iframe,
+.mb2slider-video object,
+.mb2slider-video embed {
+    height: 100%;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+
+		
+	.mb2slider .lSAction > .lSPrev {
+		left: 0!important;
+	}
+	.mb2slider .lSAction > .lSNext {
+		right: 0!important;	
+	}	
+	
+
+}

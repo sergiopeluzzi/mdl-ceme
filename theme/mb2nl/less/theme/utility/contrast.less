@@ -1,0 +1,99 @@
+
+@hccolor: #ff0;
+@hccolor2: #000;
+
+
+
+/* General contrast yelow black style */
+body.hcyb {
+	
+	color: @hccolor;
+	background-color: @hccolor2;
+	
+	
+	#page {
+		#page-a,
+		#page-b {
+			background-color: @hccolor2;	
+		}		
+	}
+	
+	
+	/* =============================== HEADER & PAGE HEADER =============================== */
+	#main-header,
+	#page-header {
+		background-image:none;
+		background-color: transparent;	
+	}
+	
+	
+	
+	/* =============================== BLOCKS =============================== */
+	
+	#block-region-content .block,
+	.style-default .block {		
+		background-color: transparent;
+		border-color: @hccolor;
+		
+		> .header {
+			background-image: none;
+			background-color: transparent;
+			border-color: @hccolor;
+			color: @hccolor;
+			
+			h2 {
+				color: @hccolor;	
+			}
+			
+			&:before {
+				background-color: @hccolor;
+				color: @hccolor2;	
+			}	
+		}
+				
+	}
+	
+	
+	/* =============================== MAIN NAVIGATION =============================== */
+	#main-navigation {
+		
+		.main-navigation-inner {
+			background-color: @hccolor2;
+			border-top: solid 1px @hccolor;
+			border-bottom: solid 1px @hccolor;
+		}
+	}
+	
+	.main-menu {
+		> li {
+			> a {
+				color: @hccolor;
+				
+				&:hover,
+				&:focus {
+					color: @hccolor2;
+					background-color: @hccolor;
+				}	
+			}
+			
+			li {
+				a {
+					background-color: @hccolor;
+					color: @hccolor2;
+					border-color: @hccolor2;
+					
+					&:hover,
+					&:focus {
+						background-color: @hccolor2;
+						color: @hccolor;	
+					}
+				}	
+			}
+				
+		}
+		
+			
+	}
+	
+		
+}

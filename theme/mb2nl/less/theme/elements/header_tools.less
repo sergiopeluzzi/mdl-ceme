@@ -1,0 +1,193 @@
+
+
+.header-tools {
+
+	position: absolute;
+	right: 15px;
+	top: 100%;
+	z-index: 2;
+	margin: 0 -2px;
+
+	.dir-rtl & {
+		right: auto;
+		left: 15px;
+	}
+
+	.header-tools-link,
+	.theme-plugins,
+	.popover-region-toggle {
+		display: inline-block;
+		width: auto;
+		height: auto !important;
+		line-height: inherit !important;
+	}
+
+
+	.header-tools-link,
+	.popover-region-toggle {
+		background-color: darken(@color_gray1,4%);
+		color: #fff;
+		text-decoration: none;
+		margin: 0 2px;
+		text-align: center;
+		padding: 3px 0;
+		min-width: 39px;
+	}
+
+
+	.header-tools-link {
+
+		&.tool-login {
+			background-color: @accent1;
+		}
+
+		&.tool-links {
+			background-color: @color_warning;
+		}
+
+	}
+
+	&.type-text {
+		.header-tools-link {
+			padding: 3px 10px;
+
+			span {
+				font-size: @fssmall;
+			}
+		}
+	}
+
+
+	.header-tools-link i,
+	.popover-region-toggle {
+		font-size: 14px;
+	}
+
+
+	.theme-plugins {
+
+		.popover-region-container {
+			color: @textcolor;
+
+
+			.content-item-container {
+				color: @textcolor;
+
+				&:hover,
+				&:focus {
+					color: #fff;
+				}
+			}
+
+			h1,h2,h3,h4,h5,h6 {
+				color: @headingscolor!important;
+			}
+
+			a {
+				color: @linkcolor;
+
+				&:hover,
+				&:focus {
+					color: @linkhcolor;
+				}
+			}
+		}
+
+	}
+
+	.theme-lfx & {
+		.header-tools-link,
+		.popover-region-toggle {
+			background-color: @accent2;
+		}
+
+		.header-tools-link {
+
+			&.tool-login {
+				background-color: @accent1;
+			}
+
+			&.tool-links {
+				background-color: @color_warning;
+			}
+
+		}
+	}
+
+	.header-dark.theme-lfw & {
+		.header-tools-link,
+		.popover-region-toggle {
+			background-color: lighten(@accent2,9%);
+		}
+
+		.header-tools-link {
+
+			&.tool-login {
+				background-color: @accent1;
+			}
+
+			&.tool-links {
+				background-color: @color_warning;
+			}
+
+		}
+	}
+
+
+	.text2 {
+		display: none;
+	}
+
+	.header-tools-link.active {
+		background-color: lighten(@accent2,12%) !important;
+
+		.text1 {
+			display: none;
+		}
+
+		.text2 {
+			display: inline-block;
+		}
+	}
+
+}
+
+
+@media only screen and (max-width:768px){
+	.header-tools {
+
+		left: 15px !important;
+		right: 15px !important;
+		text-align: right;
+
+		.popover-region-container {
+			text-align: left;
+		}
+
+		.header-tools-link {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+
+		.text1,
+		.text2 {
+			display: none !important;
+		}
+
+		.theme-plugins > div {
+			position: static;
+		}
+
+
+
+		.dir-rtl & {
+			text-align: left;
+
+			.popover-region-container {
+				text-align: right;
+			}
+		}
+
+
+	}
+}

@@ -1,0 +1,153 @@
+
+.block-myoverview {
+	&.block-cards {
+		border: 0;
+
+		.container-fluid {
+			padding: 0;
+		}
+
+		.coursemenubtn {
+			margin-top: -5px;
+		}
+
+		[data-region="favourite-icon"] {
+			position: relative;
+			top: -4px;
+		}
+
+		.m-t-1 {
+
+			.btn-group {
+				margin: 0;
+			}
+
+			.pagination {
+				margin: 0;
+				float: right;
+
+				ul {
+					margin: 0;
+					position: relative;
+					top: 5px;
+				}
+
+				.page-item {
+					margin: 0 6px;
+					font-size: @fsheading3;
+				}
+			}
+		}
+
+
+
+		#groupingdropdown,
+		#displaydropdown {
+			img {
+				display: none;
+			}
+
+			> span {
+				display: inline-block;
+
+				&:before {
+					.mb2_font_fa();
+					content: '\f0b0';
+				}
+			}
+		}
+
+		#displaydropdown {
+			> span {
+				&:before {
+					content: '\f00a';
+					top: 1px;
+					position: relative;
+				}
+			}
+		}
+
+
+		.summaryimage {
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+			width:74px;
+			height: 74px;
+			position: relative;
+			top: 7px;
+			margin-right: 14px;
+		}
+
+		.coursename {
+
+			h6 {
+				font-size: @fsgeneral;
+			}
+
+			color: inherit;
+		}
+
+		.row-fluid {
+			.clearfix();
+		}
+
+		.course-listitem {
+			padding-left: 0;
+		}
+
+
+		.course-summaryitem {
+			background-color: #fff;
+			.mb2_box_shadow(2px 2px 0, rgba(0,0,0,.08));
+			margin-bottom: 20px;
+		}
+
+	}
+
+	.progress {
+		margin-bottom: 3px;
+		height: 8px;
+	}
+
+
+}
+
+
+.block_myoverview {
+
+	.myoverviewimg {
+		display: none;
+	}
+
+
+	/* Show image only in Moodle 3.5 and later */
+	.custom_id_5b1649004a21 & {
+
+		.myoverviewimg {
+			display: block;
+			height: 150px;
+			margin-bottom: 15px;
+
+			&.courseimage {
+				background-position: 50% 50%;
+				background-size: cover;
+			}
+		}
+
+	}
+
+	.well {
+		background-color: #fff;
+		.mb2_box_shadow(0 0 0,transparent);
+	}
+
+	.media {
+		margin-bottom: 9px;
+	}
+
+	.text-muted {
+		color: @textcolor;
+	}
+
+}

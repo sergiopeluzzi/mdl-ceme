@@ -1,0 +1,311 @@
+
+#course-panel {
+	
+	.container-fluid {
+		max-width: 100%;
+		
+		.row > div {
+			margin-bottom: 20px;	
+		}	
+	}
+	
+	.teacher-panel,
+	.student-panel-a,
+	.student-panel-b {
+		padding: 30px 15px 10px 15px;	
+	}
+	
+	
+	
+	
+	.teacher-panel,
+	.student-panel-a {
+		.box {
+			.mb2_border_radius(3px);
+			border: solid 1px @color_box_border;
+			background-color: @color_box_bg;
+			margin: 0 0 20px 0;	
+			
+			> h3 {
+				background-color: @accent1;
+				background-image: url([[pix:theme|svg/strip2_white8]]);
+				color: #fff;	
+				font-size: @fsheading4;
+				margin: -1px -1px 0 -1px;
+				padding: 9px 15px;
+				.mb2_border_radius(3px 3px 0 0);
+				
+				i {
+					margin-right: 12px;	
+				}								
+			}
+			
+			
+			/* Custom colors */
+			
+			&.box-qbank,
+			&.box-contacts {
+				> h3 {
+					background-color: @color_info;	
+				}				
+			}
+			
+			
+			&.box-badges,
+			&.box-badges2 {
+				> h3 {
+					background-color: @color_warning;	
+				}				
+			}	
+			
+			
+			&.box-students,
+			&.box-students2 {
+				> h3 {
+					background-color: @color_success;	
+				}				
+			}
+			
+			
+			
+			/* Course box */
+			
+			&.box-course {
+				background-color: transparent;
+				border: 0;
+				
+				> h3 {
+					.mb2_border_radius(0);
+					margin: 0 0 13px 0;	
+				}	
+			}
+			
+			
+			
+			
+			&.box-contacts {
+				> ul {
+					
+					margin: 0;
+					padding: 0;
+					
+					> li {
+						.clearfix();
+						padding: 8px 15px;
+						border-bottom: solid 1px @color_box_border;	
+						
+						&:last-child {
+							border: 0;	
+						}
+					}	
+				}
+				
+				.user-picture {
+					float: left;
+					margin-right: 10px;	
+				}
+				
+				.rolename {
+					font-weight: bold;	
+				}
+				
+				
+				.user-contacts {
+					font-size: @fssmall;
+					
+					i {
+						margin: 0 3px;	
+					}
+					
+					> span {
+						margin-right: 10px;	
+					}
+				}
+					
+			}
+			
+			
+		}			
+	}
+	
+	
+	
+	.student-panel-a {
+		.box {
+			margin-bottom: 0;	
+		}	
+	}
+	
+	
+	.dir-rtl & {
+		.teacher-panel,
+		.student-panel-a {
+			.box {
+				&.box-contacts {
+					.user-picture {
+						float: right;	
+						margin-right: 0;
+						margin-left: 10px;
+					}
+					
+					
+					.user-contacts {						
+						> span {
+							margin-right: 0;	
+							margin-left: 10px;	
+						}
+					}	
+				}
+			}
+		
+		}
+	}
+	
+	
+	
+	.boxlist {
+		margin: 0;
+		padding: 0;
+		
+		> li {
+			margin: 0;
+			padding: 0;
+			
+			> a,
+			> span {
+				padding: 8px 15px;
+				display: block;	
+				color: @textcolor;
+				border-bottom: solid 1px @color_box_border;
+				
+				> img {
+					margin-right: 8px;	
+				}			
+			}
+			
+			> a {
+				&:hover,
+				&:focus {
+					color: @linkcolor;
+					background-color: darken(@color_box_bg,3%);	
+				}	
+				
+				> .details {
+					font-size: @fssmall;
+					background-color: @accent1;
+					display: inline-block;
+					vertical-align: top;
+					margin: -2px 7px 0 7px;
+					height: 20px;
+					line-height: 20px;
+					color: #fff;
+					padding: 0 5px;	
+					.mb2_border_radius(3px);
+				}
+			}
+				
+			&:last-child {
+				> a {
+					border: 0;	
+				}	
+			}
+			
+			
+			> span {
+				background-color: darken(@color_box_bg,7%);
+				font-weight: bold;	
+			}
+				
+		}	
+	}
+	
+	
+	.progress {
+		margin: 0 0 -1px 0;
+		.mb2_border_radius(0 0 3px 3px);	
+		height: 36px;
+		
+		.progress-bar {
+			line-height: 36px;
+			font-size: @fsheading4;
+			font-weight: @fwheadings;
+			min-width: 50px;	
+		}
+	}
+	
+	
+	.student-panel-b {
+		background-color: @color_gray2;
+		background-image: url([[pix:theme|svg/strip1_black8]]);	
+		
+		.box {
+			background-color: @color_success;
+			color: #fff;
+			text-align: center;
+			.mb2_border_radius(3px);
+			overflow: hiiden;
+			
+			a {
+				color: #fff;
+				
+				> h3 {
+					color: #fff;
+					margin: 0;
+					padding: 9px 15px;
+					background-color: rgba(0,0,0,.1);	
+				}	
+				
+				i {
+					font-size: 46px;
+					margin: 13px 0;	
+				}
+			}
+			
+			&.box-studentbadges {
+				background-color: @color_warning;	
+			}
+			
+			
+			&.box-competencies {
+				background-color: @color_info;	
+			}
+			
+			
+		}
+		
+	}
+	
+	
+	
+	.dir-rtl & {
+		.teacher-panel,
+		.student-panel-a {
+			.box {				
+				> h3 {					
+					i {
+						margin-right: 0;	
+						margin-left: 12px;
+					}
+				}
+			}	
+		}
+		
+		
+		.boxlist {
+			
+			> li {
+				
+				> a {
+					
+					> img {
+						margin-right: 0;	
+						margin-left: 8px;	
+					}
+				}	
+			}	
+		}	
+	}
+	
+	
+}
+
