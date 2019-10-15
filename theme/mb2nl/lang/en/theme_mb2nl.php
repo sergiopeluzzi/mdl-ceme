@@ -44,7 +44,7 @@ $string['ddmenu'] = 'Drop Down menu';
 $string['default'] = 'Default';
 $string['description'] = 'Description';
 $string['fade'] = 'Fade';
-$string['general'] = 'General';
+$string['general'] = 'Geral';
 $string['global'] = 'Global';
 $string['header'] = 'Header';
 $string['headings'] = 'Headings';
@@ -312,36 +312,36 @@ $string['customcss'] = 'Custom Css Code';
 
 
 // Settings typography
-$string['ffamily'] = 'Font';
-$string['fsize'] = 'Font Size (px)';
-$string['fweight'] = 'Font Weight';
-$string['gfont'] = 'Google Font';
-$string['hsize'] = 'Size H';
-$string['fstyle'] = 'Font Style';
-$string['ttransform'] = 'Text Transform';
-$string['uppercase'] = 'Uppercase';
-$string['capitalize'] = 'Capitalize';
-$string['lowercase'] = 'Lowercase';
-$string['italic'] = 'Italic';
-$string['oblique'] = 'Oblique';
-$string['celtypo'] = 'Custom Elements';
-$string['celsel'] = 'Css Selectors';
-$string['celseldesc'] = 'Add css selector or comma separated multiple selectors for which you want to set custom font family or font weight. E.g. "h1, .some-title, .custom-class".';
+$string['ffamily'] = 'Fonte';
+$string['fsize'] = 'Tamanho da fonte (px)';
+$string['fweight'] = 'Peso da fonte';
+$string['gfont'] = 'Fonte Google';
+$string['hsize'] = 'Tamanho H';
+$string['fstyle'] = 'Estilo da fonte';
+$string['ttransform'] = 'Transformação da fonte';
+$string['uppercase'] = 'Maiúsuculo';
+$string['capitalize'] = 'Capitalizado';
+$string['lowercase'] = 'Minúsculo';
+$string['italic'] = 'Italico';
+$string['oblique'] = 'Obliquo';
+$string['celtypo'] = 'Elementos customizados';
+$string['celsel'] = 'Seletores CSS';
+$string['celseldesc'] = 'Adicione os seletores CSS ou múltiplos seletores separados por vírgula. Exp. "h1, .some-title, .custom-class".';
 
 
 // Settings pages
-$string['cloginpage'] = 'Custom Login Page';
-$string['loginlogodesc'] = 'Leave it empty to use default logo on login page.';
-$string['pagecls'] = 'Page Class';
-$string['pageclsdesc'] = 'Custom css class for pages. Css class for each page ("pageID:className") must be placed in a new line.';
-$string['coursecls'] = 'Course Page Class';
-$string['courseclsdesc'] = 'Custom css class for course pages. Css class for each course ("courseID:className") must be placed in a new line.';
+$string['cloginpage'] = 'Página de login customizada';
+$string['loginlogodesc'] = 'Deixe vazio para usar a logo padrão na página de login.';
+$string['pagecls'] = 'Classe da pagina';
+$string['pageclsdesc'] = 'CSS customizado para páginas. Classe CSS para cada página ("pageID:className") precisa ser colocada em uma nova linha.';
+$string['coursecls'] = 'Classe da página do curso';
+$string['courseclsdesc'] = 'CSS customizado para página dos cursos. Classe CSS para cada curso ("courseID:className") precisa ser colocada em uma nova linha.';
 
 
 // Settings features
-$string['loadingscr'] = 'Loading Screen';
-$string['loadingscrdesc'] = 'Loading screen is NOT visible for admin user.';
-$string['loadinglogodesc'] = 'Leave it empty to use default logo on loading page.';
-$string['loadinghide'] = 'Hide Screen After (ms)';
-$string['scrolltt'] = 'Scroll to Top';
-$string['scrollspeed'] = 'Scroll Speed (ms)';
+$string['loadingscr'] = 'Tela de carregamento';
+$string['loadingscrdesc'] = 'Tela de carregamento não está visível para Administradores.';
+$string['loadinglogodesc'] = 'Deixe vazio para usar a logo padrão na página de carregamento.';
+$string['loadinghide'] = 'Ocultar tela depois de (ms)';
+$string['scrolltt'] = 'Rolar para o início';
+$string['scrollspeed'] = 'Velocidade da rolagem (ms)';
